@@ -13,8 +13,12 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
-    "ios": { "supportsTablet": true },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/stock-market.png",
@@ -22,9 +26,15 @@
       },
       "package": "com.example.expostocksapp"
     },
-    "plugins": ["expo-router"],
+    "plugins": [
+      "expo-router"
+    ],
     "extra": {
-      "ALPHA_VANTAGE_KEY": " JN8P7QY4PX6UQLFW"
+      "ALPHA_VANTAGE_KEY": " JN8P7QY4PX6UQLFW",
+      "router": {},
+      "eas": {
+        "projectId": "5e003def-0413-41dc-ad60-2c126b48ad4f"
+      }
     }
   }
 }
