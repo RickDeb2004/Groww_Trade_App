@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "Expo Stocks App",
+    "slug": "expo-stocks-app",
+    "scheme": "stocksapp",
+    "version": "1.0.0",
+    "sdkVersion": "53.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/stock-market.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/stock-market.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": { "supportsTablet": true },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/stock-market.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.example.expostocksapp"
+    },
+    "plugins": ["expo-router"],
+    "extra": {
+      "ALPHA_VANTAGE_KEY": " JN8P7QY4PX6UQLFW"
+    }
+  }
+}
