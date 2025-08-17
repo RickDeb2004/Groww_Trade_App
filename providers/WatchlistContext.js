@@ -68,8 +68,8 @@ export function WatchlistProvider({ children }) {
         lists,
         loadLists,
         addToWatchlist,
-        removeFromWatchlist, // 👈 expose
-        removeFromWatchlists, // 👈 expose
+        removeFromWatchlist,
+        removeFromWatchlists, 
         isInAnyWatchlist,
         deleteList,
       }}

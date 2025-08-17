@@ -135,7 +135,7 @@ export default function ExploreScreen() {
 
         <TouchableOpacity onPress={toggleTheme} style={{ padding: 6 }}>
           <Feather
-            name={theme === "dark" ? "sun" : "moon"} // 👈 toggle icon
+            name={theme === "dark" ? "sun" : "moon"} 
             size={22}
             color={palette.link}
           />
@@ -185,19 +185,9 @@ export default function ExploreScreen() {
   );
 }
 
-// const styles = StyleSheet.create({
-//   container: { flex: 1, padding: 16 },
-//   topBar: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 },
-//   title: { fontSize: 24, fontWeight: '700' },
-//   section: { marginTop: 8 },
-//   sectionHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 },
-//   sectionTitle: { fontSize: 18, fontWeight: '600' },
-//   card: { flex: 1, padding: 12, borderRadius: 14, gap: 4 },
-//   center: { alignItems: 'center', justifyContent: 'center', marginTop: 24 },
-//   ticker: { fontSize: 16, fontWeight: '700' },
-// });
+
 const styles = StyleSheet.create({
-  container: { flex: 1, paddingHorizontal: 16, paddingTop: 20 }, // more breathing space
+  container: { flex: 1, paddingHorizontal: 16, paddingTop: 20 }, 
   topBar: {
     flexDirection: "row",
     alignItems: "center",
@@ -205,7 +195,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   title: { fontSize: 26, fontWeight: "700" },
-  section: { marginTop: 20 }, // more gap between sections
+  section: { marginTop: 20 }, 
   sectionHeader: {
     flexDirection: "row",
     justifyContent: "space-between",

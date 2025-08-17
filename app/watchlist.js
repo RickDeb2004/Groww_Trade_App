@@ -14,7 +14,7 @@ import { useWatchlists } from "../providers/WatchlistContext";
 import { useTheme } from "../providers/ThemeContext";
 import { fetchCompanyOverview, fetchDailySeries } from "../lib/api";
 
-// 🔹 Fallback Data (when API fails)
+
 const FALLBACK_QUOTES = {
   TCS: {
     symbol: "TCS",
@@ -77,14 +77,14 @@ const FALLBACK_QUOTES = {
 export default function WatchlistScreen() {
   const { palette } = useTheme();
   const router = useRouter();
-  const { lists, loadLists, deleteList } = useWatchlists(); // 🔹 added deleteList
+  const { lists, loadLists, deleteList } = useWatchlists(); 
   const [quotes, setQuotes] = useState({});
   const [loading, setLoading] = useState(true);
 
   const scrollRef1 = useRef(null);
   const scrollRef2 = useRef(null);
 
-  // Hardcoded Indices (2 rows)
+  
   const indicesRow1 = [
     {
       symbol: "SENSEX",
@@ -194,11 +194,11 @@ export default function WatchlistScreen() {
               exchange: overview?.Exchange || "NSE",
             };
           } else {
-            // ✅ Not enough data -> use fallback
+           
             if (FALLBACK_QUOTES[symbol]) {
               result[symbol] = FALLBACK_QUOTES[symbol];
             } else {
-              // last-resort graceful default
+              
               result[symbol] = {
                 symbol,
                 price: "-",
@@ -209,7 +209,7 @@ export default function WatchlistScreen() {
             }
           }
         } catch {
-          // ✅ API error -> use fallback
+         
           if (FALLBACK_QUOTES[symbol]) {
             result[symbol] = FALLBACK_QUOTES[symbol];
           } else {
@@ -231,7 +231,7 @@ export default function WatchlistScreen() {
     load();
   }, [lists]);
 
-  // 🔹 Auto-scroll effect for two rows
+
   useEffect(() => {
     let index1 = 0,
       index2 = indicesRow2.length - 1;
@@ -283,7 +283,7 @@ export default function WatchlistScreen() {
 
   return (
     <View style={[styles.container, { backgroundColor: palette.bg }]}>
-      {/* 🔹 Indices Carousel (2 rows) */}
+      
       <View style={{ gap: 12, marginTop: 20 }}>
         <ScrollView
           ref={scrollRef1}
@@ -344,7 +344,7 @@ export default function WatchlistScreen() {
         </ScrollView>
       </View>
 
-      {/* 🔹 Watchlist Stocks */}
+
       {loading ? (
         <ActivityIndicator style={{ marginTop: 40 }} />
       ) : empty ? (
@@ -355,7 +355,7 @@ export default function WatchlistScreen() {
         </View>
       ) : (
         <FlatList
-          data={Object.keys(lists).filter((name) => name !== "Default")} // remove default
+          data={Object.keys(lists).filter((name) => name !== "Default")} 
           keyExtractor={(k) => k}
           renderItem={({ item: name }) => (
             <View>
